@@ -5,7 +5,7 @@
     </div>
     <div class="parcelamento-wrapper__list-wrapper">
         <ul class="parcelamento-wrapper__list-wrapper__list" >
-            <li class="parcelamento-wrapper__list-wrapper__list__item" *ngFor="let item of parcelas">
+            <li class="parcelamento-wrapper__list-wrapper__list__item" (click)="redirect('')" *ngFor="let item of parcelas">
                 {{item}}
             </li>
         </ul>

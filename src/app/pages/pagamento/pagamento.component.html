@@ -4,7 +4,7 @@
             <div class="pagamento-wrapper__text__title">Pagar com código de barras</div>
             <div class="pagamento-wrapper__text__info">Você pode parcelar em até 12x no cartão</div>
         </div>
-            <div class="pagamento-wrapper__option">
+            <div class="pagamento-wrapper__option" (click)="redirect('')">
                 <div class="pagamento-wrapper__option__image">
                     <img src="../../../assets/imgs/bar-code.svg" alt="">
                 </div>
@@ -15,7 +15,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pagamento-wrapper__option">
+            <div class="pagamento-wrapper__option" (click)="redirect('')">
                 <div class="pagamento-wrapper__option__image">
                     <img src="../../../assets/imgs/type-numbers.svg" alt="">
                 </div>
@@ -27,5 +27,5 @@
                 </div>
             </div>
         </div>
-    <button class="pagamento-wrapper__button">PRÓXIMO</button>
+    <button class="pagamento-wrapper__button">VOLTAR</button>
 </div>
