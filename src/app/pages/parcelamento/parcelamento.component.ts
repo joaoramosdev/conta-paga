@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-parcelamento',
@@ -21,9 +22,13 @@ export class ParcelamentoComponent implements OnInit {
     "12x R$100,00",
   ];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  redirect(to: string) {
+    this.router.navigate(['cartao'])
   }
 
 }
