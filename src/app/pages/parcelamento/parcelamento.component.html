@@ -1,0 +1,17 @@
+<div class="parcelamento-wrapper">
+    <div class="parcelamento-wrapper__text">
+        <div class="parcelamento-wrapper__text__title">Escolha a melhor opção</div>
+        <div class="parcelamento-wrapper__text__info">Selecione uma opção de parcelamento no cartão de crédito:</div>
+    </div>
+    <div class="parcelamento-wrapper__list-wrapper">
+        <ul class="parcelamento-wrapper__list-wrapper__list" >
+            <li class="parcelamento-wrapper__list-wrapper__list__item" *ngFor="let item of parcelas">
+                {{item}}
+            </li>
+        </ul>
+    </div>
+    <div class="parcelamento-wrapper__discount-wrapper">
+        <input type="text" class="parcelamento-wrapper__discount-wrapper__input">
+        <button class="parcelamento-wrapper__discount-wrapper__button">USAR CUPOM</button>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+@import "../../../style/variables.scss";
+
+.conta-info-wrapper {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 235px 104px 0 104px;
+  font-size: 40px;
+
+  &__header {
+    display: flex;
+    width: 100%;
+    margin-bottom: 80px;
+
+    &__info {
+      margin-left: 20px;
+      text-align: left;
+
+      &__text {}
+
+      &__value {
+        font-weight: 700;
+        font-size: 90px;
+        color: $main-blue;
+      }
+
+    }
+
+    &__image {
+      width: 120px;
+      height: 120px;
+      display: flex;
+      padding: 30px;
+      border-radius: 50%;
+      background-color: $main-blue;
+    }
+  }
+
+
+
+  &__info {
+    width: 100%;
+    margin-bottom: 80px;
+
+    &__item {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+
+  &__message {
+    margin-bottom: 80px;
+    background-color: $gray;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: left;
+  }
+
+  &__button {
+    padding: 20px 120px;
+    font-size: 70px;
+    font-family: "Futura";
+    background-color: #01A4F3;
+    font-weight: 700;
+    color: #FFF;
+    border-radius: 20px;
+    border: none;
+    margin-left: 20px;
+  }
+}

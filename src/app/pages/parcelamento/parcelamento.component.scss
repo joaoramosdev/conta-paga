@@ -1,0 +1,76 @@
+@import "../../../style/variables.scss";
+
+.parcelamento-wrapper {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 100px 173px 0 173px;
+
+
+  &__text {
+    margin-bottom: 100px;
+
+    &__title {
+      font-weight: 700;
+      font-size: 60px;
+      margin-bottom: 30px;
+    }
+
+    &__info {
+      font-size: 40px;
+    }
+  }
+
+  &__list-wrapper {
+    width: 100%;
+
+    &__list {
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+      margin-bottom: 50px;
+
+      &__item {
+        font-weight: 700;
+        font-size: 32px;
+        background-color: $gray;
+        padding: 30px;
+        border-radius: 50px;
+        cursor: pointer;
+
+        &:not(last-child) {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+  }
+
+  &__discount-wrapper {
+    display: flex;
+    width: 100%;
+
+    &__input {
+      flex: 1;
+      border-radius: 20px;
+      font-size: 32px;
+      background-color: $gray;
+      padding: 0 10px;
+    }
+
+    &__button {
+      padding: 20px 30px;
+      font-size: 30px;
+      font-family: 'Futura';
+      background-color: $main-blue;
+      font-weight: 700;
+      color: #FFF;
+      border-radius: 50px;
+      border: none;
+      margin-left: 20px;
+    }
+  }
+
+}

@@ -1,0 +1,26 @@
+// Colors
+
+$main-blue: #01A4F3;
+$main-yellow: #F8BD3B;
+$main-green: #20B573;
+$warning-red: #C2272D;
+$gray: #F2F3F5;
+
+// Fonts
+@font-face {
+  font-family: "Futura";
+  font-weight: 500;
+  src: url('/assets/fonts/futura-bt.ttf');
+}
+
+@font-face {
+  font-family: "Futura";
+  font-weight: 700;
+  src: url('/assets/fonts/futura-bt-bold.ttf');
+}
+
+@font-face {
+  font-family: "Gineso Soft";
+  font-weight: 700;
+  src: url('/assets/fonts/GinesoSoft-NorExB.ttf');
+}
