@@ -1,1 +1,79 @@
+@import "../../../style/variables.scss";
 
+.pagamento-wrapper {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 120px 110px 235px 110px;
+  height: 100vh;
+  justify-content: space-between;
+
+  &__text {
+    margin-bottom: 120px;
+
+    &__title {
+      font-weight: 700;
+      font-size: 46px;
+      margin-bottom: 30px;
+    }
+
+    &__info {
+      font-size: 40px;
+    }
+  }
+
+  &__image {
+    width: 480px;
+    margin-bottom: 80px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__option {
+    display: flex;
+    width: 100%;
+    margin-bottom: 80px;
+
+    &__info {
+      margin-left: 40px;
+      text-align: left;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+
+      &__text {
+        font-size: 40px;
+      }
+
+      &__arrow {
+        width: 25px;
+      }
+
+    }
+
+    &__image {
+      width: 105px;
+      height: 105px;
+      display: flex;
+      padding: 30px;
+      border-radius: 50%;
+      background-color: $main-blue;
+    }
+  }
+
+  &__button {
+    padding: 20px 120px;
+    font-size: 70px;
+    font-family: "Futura";
+    background-color: #01A4F3;
+    font-weight: 700;
+    color: #FFF;
+    border-radius: 20px;
+    border: none;
+  }
+}
