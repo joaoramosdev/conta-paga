@@ -1,0 +1,188 @@
+@import "../../../style/variables.scss";
+
+.termos-wrapper {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 173px 100px 173px;
+  font-size: 40px;
+  height: 100vh;
+
+  &__header {
+    display: flex;
+    width: 100%;
+    margin-bottom: 80px;
+
+    &__text {
+      font-weight: 700;
+      font-size: 56px;
+      width: 100%;
+      text-align: center;
+    }
+
+  }
+
+
+
+  &__info {
+    width: 100%;
+    margin-bottom: 230px;
+
+    &__termos {
+      margin-bottom: 80px;
+      background-color: $gray;
+      padding: 15px;
+      border-radius: 40px;
+      text-align: left;
+      height: 400px;
+      width: 100%;
+      overflow-y: auto;
+    }
+
+    &__button-wrapper {
+      &__button {
+        padding: 10px 20px;
+        font-size: 30px;
+        font-family: 'Futura';
+        background-color: $main-green;
+        font-weight: 700;
+        color: #FFF;
+        border-radius: 50px;
+        border: none;
+        margin-left: 20px;
+        text-transform: uppercase;
+
+        &.warn {
+          background-color: $warning-red;
+        }
+      }
+    }
+
+
+  }
+
+  &__contact {
+    &__title {
+      font-weight: 700;
+      font-size: 56px;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 145px;
+    }
+
+    &__input-wrapper {
+      text-align: left;
+
+      &__title {
+        margin-bottom: 30px;
+        font-weight: 700;
+      }
+
+      &__cel-input {
+        margin-bottom: 25px;
+        width: 100%;
+        border-radius: 10px;
+        font-size: 50px;
+        border: none;
+        background-color: $gray;
+        padding: 15px;
+
+      }
+
+      &__cel-checkbox {
+        font-weight: 700;
+        font-size: 21px;
+        position: relative;
+        margin-left: 30px;
+
+        input[type=checkbox] {
+          width: 1em;
+          font-size: inherit;
+          margin: 0;
+          transform: translateX(-9999px);
+        }
+
+        input[type=checkbox]+label:before {
+          position: absolute;
+          content: '';
+          left: -1.3em;
+          top: 0;
+          width: 1em;
+          height: 1em;
+          margin: 0;
+          border: none;
+          border-radius: 10%;
+          background-color: #bbbbbb;
+        }
+
+        input[type=checkbox]+label:after {
+          position: absolute;
+          content: '';
+          left: -1.3em;
+          top: 0;
+          width: 1em;
+          height: 1em;
+          margin: 0;
+          border: none;
+          background-color: white;
+          border-radius: 10%;
+          transform: scale(0.9);
+        }
+
+        /*checked*/
+        input[type=checkbox]:checked+label:before {
+          position: absolute;
+          content: '';
+          left: -1.3em;
+          top: 0;
+          width: 1em;
+          height: 1em;
+          margin: 0;
+          border: none;
+          background-color: #3b88fd;
+        }
+
+        input[type=checkbox]:checked+label:after {
+          position: absolute;
+          content: "\2713";
+          left: -1.3em;
+          top: 0;
+          width: 1em;
+          height: 1em;
+          margin: 0;
+          border: none;
+          background-color: #3b88fd;
+          border-radius: 10%;
+          color: white;
+          text-align: center;
+          line-height: 1;
+        }
+
+        /*focused*/
+        input[type=checkbox]:focus+label:before {
+          border: 0.1em solid #8eb9fb;
+          margin-top: -0.1em;
+          margin-left: -0.1em;
+          box-shadow: 0 0 0.2em #3b88fd;
+        }
+
+      }
+
+    }
+  }
+
+  &__button {
+    padding: 20px 120px;
+    font-size: 70px;
+    font-family: "Futura";
+    background-color: $main-blue;
+    font-weight: 700;
+    color: #FFF;
+    border-radius: 20px;
+    border: none;
+    margin-left: 20px;
+    margin-top: auto;
+
+  }
+}
