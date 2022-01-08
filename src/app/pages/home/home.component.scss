@@ -6,21 +6,45 @@
   flex-direction: column;
   height: 100vh;
   background: $main-yellow;
+  text-align: left;
 
   &__header {
-    color: #FFFFFF;
-    font-family: Gineso Soft;
-    font-size: 110px;
-    padding: 34px 55px;
-    background-color: $main-blue;
     width: 100%;
     margin-bottom: 120px;
+
+    &__text {
+      position: relative;
+      color: #FFFFFF;
+      font-family: Gineso Soft;
+      font-size: 110px;
+      padding: 34px 20px 34px 55px;
+      background-color: $main-blue;
+      z-index: 1;
+
+      &:before {
+        content: "\a";
+        border-style: solid;
+        position: absolute;
+        right: -91px;
+        top: -15px;
+        --a: 216px;
+        border-bottom: calc(0.866 * var(--a)) solid $main-blue;
+        border-left: calc(var(--a) / 2) solid transparent;
+        border-right: calc(var(--a) / 2) solid transparent;
+        border-top: 0;
+        height: 0;
+        width: 0;
+        transform: rotate(300deg);
+        border-radius: 47px;
+        z-index: -1;
+      }
+
+    }
   }
 
   &__content {
     color: $main-blue;
     padding: 0 74px;
-    text-align: left;
 
     &__info {
       max-width: 60%;
@@ -65,7 +89,11 @@
   &__footer {
     background-color: #F2F3F5;
     height: 100%;
-    padding: 40px 202px;
+    padding: 30px 202px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     &__text {
       margin-bottom: 30px;
