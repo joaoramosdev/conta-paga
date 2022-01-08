@@ -1,0 +1,99 @@
+@import "../../../style/variables.scss";
+
+.home-wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: $main-yellow;
+
+  &__header {
+    color: #FFFFFF;
+    font-family: Gineso Soft;
+    font-size: 110px;
+    padding: 34px 55px;
+    background-color: $main-blue;
+    width: 100%;
+    margin-bottom: 120px;
+  }
+
+  &__content {
+    color: $main-blue;
+    padding: 0 74px;
+    text-align: left;
+
+    &__info {
+      max-width: 60%;
+      margin-bottom: 100px;
+
+      &__title {
+        font-weight: 700;
+        font-size: 62px;
+        margin-bottom: 30px;
+      }
+
+      &__text {
+        font-size: 38px;
+      }
+    }
+
+    &__image-button {
+      position: relative;
+
+      &__image {
+        max-height: 844px;
+      }
+
+      &__button {
+        padding: 20px 80px;
+        font-size: 58px;
+        font-family: "Futura";
+        background-color: #01A4F3;
+        font-weight: 700;
+        color: #FFF;
+        border-radius: 80px;
+        border: none;
+        text-transform: uppercase;
+        position: absolute;
+        right: 0;
+        top: 312px;
+      }
+    }
+
+  }
+
+  &__footer {
+    background-color: #F2F3F5;
+    height: 100%;
+    padding: 40px 202px;
+
+    &__text {
+      margin-bottom: 30px;
+      font-weight: 700;
+      font-size: 39px;
+    }
+
+    &__images {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding: 0 10px;
+
+      &__image {
+        width: 126px;
+        height: 64px;
+
+        &:not(:last-child) {
+          margin-right: 60px;
+        }
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+          width: auto;
+        }
+      }
+
+    }
+  }
+}
