@@ -11,6 +11,10 @@ import { ContaInfoComponent } from './pages/conta-info/conta-info.component';
 import { CartaoComponent } from './pages/cartao/cartao.component';
 import { ConclusaoComponent } from './pages/conclusao/conclusao.component';
 import { TermosComponent } from './pages/termos/termos.component';
+import { CodigoBarrasComponent } from './pages/codigo-barras/codigo-barras.component';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -22,11 +26,15 @@ import { TermosComponent } from './pages/termos/termos.component';
     ContaInfoComponent,
     CartaoComponent,
     ConclusaoComponent,
-    TermosComponent
+    TermosComponent,
+    CodigoBarrasComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxMaskModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,6 +8,7 @@ import { ContaInfoComponent } from './pages/conta-info/conta-info.component';
 import { CartaoComponent } from './pages/cartao/cartao.component';
 import { ConclusaoComponent } from './pages/conclusao/conclusao.component';
 import { TermosComponent } from './pages/termos/termos.component';
+import { CodigoBarrasComponent } from './pages/codigo-barras/codigo-barras.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'cartao', component: CartaoComponent },
   { path: 'conclusao', component: ConclusaoComponent },
   { path: 'termos', component: TermosComponent },
+  { path: 'codigo-barras', component: CodigoBarrasComponent },
 ];
 
 @NgModule({

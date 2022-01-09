@@ -1,0 +1,51 @@
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+
+@Component({
+  selector: 'app-codigo-barras',
+  templateUrl: './codigo-barras.component.html',
+  styleUrls: ['./codigo-barras.component.scss']
+})
+export class CodigoBarrasComponent implements OnInit {
+
+  input1: any; 
+  input2: any;
+  input3: any; 
+  input4: any;
+
+  public codigoForm = new FormGroup({
+    mainInput: new FormControl('', Validators.required),
+  });
+
+  constructor(private formBuilder: FormBuilder) { }
+
+  ngOnInit(): void {
+    this.codigoForm.get('mainInput')?.valueChanges.subscribe(() => {
+      let string = this.codigoForm.controls['mainInput'].value;
+
+      let string1 = string.slice(0,10);
+      let string2 = string.slice(10,22);
+      let string3 = string.slice(22,35);
+      let string4 = string.slice(35,50);
+
+      let breakpoints = [10, 22, 35];
+      
+      if(breakpoints.indexOf(string.length) > -1) {
+        this.codigoForm.get('mainInput')?.setValue(string.concat('\n'));
+      } 
+      
+      this.input1 = string1;
+      this.input2 = string2;
+      this.input3 = string3;
+      this.input4 = string4;
+  
+      console.log(string);
+    })
+  }
+
+
+  clearForm() {
+    this.codigoForm.get('mainInput')?.setValue('');
+  }
+
+}

@@ -1,0 +1,27 @@
+<div class="codigo-barras-wrapper">
+    <div class="codigo-barras-wrapper__header">
+        <div class="codigo-barras-wrapper__header__text">
+            Digite o código de barras
+        </div>
+    </div>
+
+    <form class="codigo-barras-wrapper__input-wrapper" [formGroup]="codigoForm">
+        <span class="codigo-barras-wrapper__input-wrapper__clear" (click)="clearForm()">LIMPAR</span>
+        <textarea 
+            class="codigo-barras-wrapper__input-wrapper__input" 
+            name="codigo-barras" 
+            id="codigo-barras"
+            formControlName="mainInput"
+            maxlength="50"
+            ></textarea>
+            <div class="codigo-barras-wrapper__input-wrapper__input-group" >
+                <span>{{ input1 | mask: '00000.00000'}}</span>
+                <span>{{ input2 | mask: '00000.000000'}}</span>
+                <span>{{ input3 | mask: '00000.000000 0'}}</span>
+                <span>{{ input4 | mask: '00000000000000'}}</span>
+            </div>
+    </form>
+
+    
+    <button class="codigo-barras-wrapper__button">PRÓXIMO</button>
+</div>
