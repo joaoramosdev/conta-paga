@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ConclusaoComponent implements OnInit {
 
   constructor(private router: Router) { 
-    setTimeout(() => {this.router.navigate(['categorias'])}, 5000)
+    setTimeout(() => {this.router.navigate(['termos'])}, 5000)
   }
 
   ngOnInit(): void {

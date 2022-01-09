@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-codigo-barras',
@@ -17,7 +18,7 @@ export class CodigoBarrasComponent implements OnInit {
     mainInput: new FormControl('', Validators.required),
   });
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
     this.codigoForm.get('mainInput')?.valueChanges.subscribe(() => {
@@ -46,6 +47,10 @@ export class CodigoBarrasComponent implements OnInit {
 
   clearForm() {
     this.codigoForm.get('mainInput')?.setValue('');
+  }
+
+  redirect(to: string) {
+    this.router.navigate(['parcelamento'])
   }
 
 }

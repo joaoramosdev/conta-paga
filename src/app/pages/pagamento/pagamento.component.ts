@@ -14,7 +14,7 @@ export class PagamentoComponent implements OnInit {
   }
 
   redirect(to: string) {
-    this.router.navigate(['conta-info'])
+    this.router.navigate([to])
   }
 
 }
