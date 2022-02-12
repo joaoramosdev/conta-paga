@@ -8,7 +8,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./codigo-barras.component.scss']
 })
 export class CodigoBarrasComponent implements OnInit {
-
   input1: any; 
   input2: any;
   input3: any; 
