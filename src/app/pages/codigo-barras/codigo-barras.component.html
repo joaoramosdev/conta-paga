@@ -1,32 +1,26 @@
 <div class="codigo-barras-wrapper">
-    <div class="codigo-barras-wrapper__header">
-        <div class="codigo-barras-wrapper__header__text">
-            Digite o código de barras
+    <div class="codigo-barras-wrapper__content">
+        <div class="codigo-barras-wrapper__header">
+            <div class="codigo-barras-wrapper__header__text">
+                Digite o código de barras
+            </div>
+            <div class="codigo-barras-wrapper__header__description">
+                Ou aponte o código de barras no leitor
+            </div>
         </div>
-        <div class="codigo-barras-wrapper__header__description">
-            Ou aponte o código de barras no leitor
+
+        <form class="codigo-barras-wrapper__input-wrapper" [formGroup]="codigoForm">
+            <!-- <span class="codigo-barras-wrapper__input-wrapper__clear" (click)="clearForm()">LIMPAR</span> -->
+            <textarea #codbar class="codigo-barras-wrapper__input-wrapper__input" name="codigo-barras"
+                id="codigo-barras" formControlName="mainInput" maxlength="50" autofocus tabindex="0"></textarea>
+        </form>
+
+        <div class="teclado">
+            <div class="botao" *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 'Apagar']; let i=index">
+                <button (click)="put(item)">{{item}}</button>
+            </div>
         </div>
     </div>
 
-    <form class="codigo-barras-wrapper__input-wrapper" [formGroup]="codigoForm">
-        <span class="codigo-barras-wrapper__input-wrapper__clear" (click)="clearForm()">LIMPAR</span>
-        <textarea #codbar
-            class="codigo-barras-wrapper__input-wrapper__input" 
-            name="codigo-barras" 
-            id="codigo-barras"
-            formControlName="mainInput"
-            maxlength="50"
-            autofocus
-            tabindex="0"
-            ></textarea>
-            <div class="codigo-barras-wrapper__input-wrapper__input-grnomoup" >
-                <span>{{ input1 | mask: '00000.00000'}}</span>
-                <span>{{ input2 | mask: '00000.000000'}}</span>
-                <span>{{ input3 | mask: '00000.000000 0'}}</span>
-                <span>{{ input4 | mask: '00000000000000'}}</span>
-            </div>
-    </form>
-
-    
     <button class="codigo-barras-wrapper__button" (click)="redirect('conta-info')">PRÓXIMO</button>
 </div>

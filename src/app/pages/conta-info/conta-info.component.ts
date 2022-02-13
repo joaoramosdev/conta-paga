@@ -9,12 +9,12 @@ import { Router } from '@angular/router';
 export class ContaInfoComponent implements OnInit {
 
   contaInfo = {
-    valor_total: "100,00",
-    data_pagamento: "20/12/2021", 
-    vencimento: "21/12/2021",
-    beneficiario: "PAYU BR INTERMED",
-    multa: "0,00",
-    juros: "0,00",
+    valor_total: "",
+    data_pagamento: "", 
+    vencimento: "",
+    beneficiario: "",
+    multa: "",
+    juros: "",
   }
 
   constructor(private router: Router) { }
