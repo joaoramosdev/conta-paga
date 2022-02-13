@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 100px 173px 100px 173px;
+  padding: 100px 154px 100px 154px;
   font-size: 40px;
   height: 100vh;
 
@@ -22,8 +22,6 @@
     }
 
   }
-
-
 
   &__info {
     width: 100%;
@@ -97,7 +95,7 @@
         margin-left: 30px;
 
         input[type=checkbox] {
-          width: 1em;
+          width: 0em;
           font-size: inherit;
           margin: 0;
           transform: translateX(-9999px);
@@ -155,7 +153,7 @@
           background-color: #3b88fd;
           border-radius: 10%;
           color: white;
-          text-align: center;
+          text-align: justify;
           line-height: 1;
         }
 
@@ -173,13 +171,13 @@
   }
 
   &__button {
-    padding: 20px 120px;
-    font-size: 70px;
+    padding: 25px 140px;
+    font-size: 60px;
     font-family: "Futura";
-    background-color: $main-blue;
+    background-color: #0487c9;
     font-weight: 700;
     color: #FFF;
-    border-radius: 20px;
+    border-radius: 100px;
     border: none;
     margin-left: 20px;
     margin-top: auto;

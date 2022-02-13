@@ -32,6 +32,9 @@
       width: 120px;
       height: 120px;
       display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-items: center;
       padding: 30px;
       border-radius: 50%;
       background-color: $main-blue;
@@ -60,13 +63,13 @@
   }
 
   &__button {
-    padding: 20px 120px;
-    font-size: 70px;
+    padding: 25px 140px;
+    font-size: 60px;
     font-family: "Futura";
-    background-color: #01A4F3;
+    background-color: #0487c9;
     font-weight: 700;
     color: #FFF;
-    border-radius: 20px;
+    border-radius: 100px;
     border: none;
     margin-left: 20px;
   }

@@ -37,6 +37,15 @@
         img {
           width: 100%;
         }
+        &__max_height {
+          margin: auto;
+          margin-left: 10px;
+          margin-right: -10px;
+          img {
+          max-height: 135px;
+          }
+        }
+      
       }
 
 

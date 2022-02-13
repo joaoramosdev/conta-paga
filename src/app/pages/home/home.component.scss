@@ -67,12 +67,12 @@
       &__image {
         max-height: 844px;
       }
-
+      
       &__button {
         padding: 20px 80px;
         font-size: 58px;
         font-family: "Futura";
-        background-color: #01A4F3;
+        background-color: $main-blue;
         font-weight: 700;
         color: #FFF;
         border-radius: 80px;
