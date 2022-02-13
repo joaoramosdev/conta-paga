@@ -28,7 +28,7 @@ export class ParcelamentoComponent implements OnInit {
   }
 
   redirect(to: string) {
-    this.router.navigate(['cartao'])
+    this.router.navigate(['conta-info/1'])
   }
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-conta-info',
@@ -17,13 +17,20 @@ export class ContaInfoComponent implements OnInit {
     juros: "",
   }
 
-  constructor(private router: Router) { }
+  tipo: any = '0';
+
+  constructor(private router: Router, private _Activatedroute: ActivatedRoute) {
+    this.tipo = this._Activatedroute.snapshot.paramMap.get('tipo');
+   }
 
   ngOnInit(): void {
   }
 
   redirect(to: string) {
-    this.router.navigate(['parcelamento'])
+    if(this.tipo !== '0')
+      this.router.navigate(['cartao'])
+    else
+      this.router.navigate(['parcelamento'])
   }
 
 }

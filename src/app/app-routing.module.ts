@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'categorias', component: CategoriasComponent },
   { path: 'pagamento', component: PagamentoComponent },
   { path: 'parcelamento', component: ParcelamentoComponent },
-  { path: 'conta-info', component: ContaInfoComponent },
+  { path: 'conta-info/:tipo', component: ContaInfoComponent },
   { path: 'cartao', component: CartaoComponent },
   { path: 'conclusao', component: ConclusaoComponent },
   { path: 'termos', component: TermosComponent },

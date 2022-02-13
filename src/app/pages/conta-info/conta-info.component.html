@@ -30,22 +30,22 @@
                 <span>Juros</span>
                 <span>{{contaInfo.juros}}</span>
             </div>
-            <!-- <div class="conta-info-wrapper__info__item">
-            <span>Taxa de conveniência do cartão</span>
+            <div class="conta-info-wrapper__info__item" *ngIf="tipo !== '0'">
+            <span>Taxa de conveniência do cartão (i)</span>
             <span>{{contaInfo.juros}}</span>
         </div>
-        <div class="conta-info-wrapper__info__item">
-            <span>Taxa do parcelamento</span>
+        <div class="conta-info-wrapper__info__item" *ngIf="tipo !== '0'">
+            <span>Taxa do parcelamento (i)</span>
             <span>{{contaInfo.juros}}</span>
         </div>
-        <div class="conta-info-wrapper__info__item">
+        <div class="conta-info-wrapper__info__item" *ngIf="tipo !== '0'">
             <span>Parcelas</span>
             <span>{{contaInfo.juros}}</span>
         </div>
-        <div class="conta-info-wrapper__info__item">
+        <div class="conta-info-wrapper__info__item" *ngIf="tipo !== '0'">
             <span>Valor total</span>
             <span>{{contaInfo.valor_total}}</span>
-        </div> -->
+        </div>
         </div>
         <div class="conta-info-wrapper__message">
             <b>Importante:</b> Pagamentos efetuados após as 19h ou em finais de semana e feriados serão efetivados no
