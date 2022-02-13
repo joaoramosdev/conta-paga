@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -7,11 +7,12 @@ import { Router } from '@angular/router';
   templateUrl: './codigo-barras.component.html',
   styleUrls: ['./codigo-barras.component.scss']
 })
-export class CodigoBarrasComponent implements OnInit {
+export class CodigoBarrasComponent implements OnInit, AfterViewInit {
   input1: any; 
   input2: any;
   input3: any; 
   input4: any;
+  @ViewChild('codbar') codbar: ElementRef | undefined;
 
   public codigoForm = new FormGroup({
     mainInput: new FormControl('', Validators.required),
@@ -40,6 +41,7 @@ export class CodigoBarrasComponent implements OnInit {
       this.input4 = string4;
   
       console.log(string);
+      this.codbar?.nativeElement.focus();
     })
   }
 
@@ -50,6 +52,10 @@ export class CodigoBarrasComponent implements OnInit {
 
   redirect(to: string) {
     this.router.navigate(['parcelamento'])
+  }
+
+  ngAfterViewInit(): void {
+      this.codbar?.nativeElement.focus();
   }
 
 }

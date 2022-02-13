@@ -3,16 +3,21 @@
         <div class="codigo-barras-wrapper__header__text">
             Digite o código de barras
         </div>
+        <div class="codigo-barras-wrapper__header__description">
+            Ou aponte o código de barras no leitor
+        </div>
     </div>
 
     <form class="codigo-barras-wrapper__input-wrapper" [formGroup]="codigoForm">
         <span class="codigo-barras-wrapper__input-wrapper__clear" (click)="clearForm()">LIMPAR</span>
-        <textarea 
+        <textarea #codbar
             class="codigo-barras-wrapper__input-wrapper__input" 
             name="codigo-barras" 
             id="codigo-barras"
             formControlName="mainInput"
             maxlength="50"
+            autofocus
+            tabindex="0"
             ></textarea>
             <div class="codigo-barras-wrapper__input-wrapper__input-grnomoup" >
                 <span>{{ input1 | mask: '00000.00000'}}</span>
