@@ -51,7 +51,7 @@ export class CodigoBarrasComponent implements OnInit, AfterViewInit {
   }
 
   redirect(to: string) {
-    this.router.navigate(['parcelamento'])
+    this.router.navigate([to])
   }
 
   ngAfterViewInit(): void {
