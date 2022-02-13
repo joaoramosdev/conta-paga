@@ -17,4 +17,8 @@ export class PagamentoComponent implements OnInit {
     this.router.navigate([to])
   }
 
+  back() {
+    window.history.back();
+  }
+
 }
