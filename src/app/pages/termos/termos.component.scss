@@ -19,7 +19,8 @@
       font-size: 56px;
       width: 100%;
       text-align: center;
-    }
+  }
+
 
   }
 
@@ -36,6 +37,31 @@
       height: 400px;
       width: 100%;
       overflow-y: auto;
+      position: relative;
+
+
+      &__checked {
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 40px;
+        background-color: rgba($gray, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .material-icons-outlined {
+          display: block;
+          font-size: 120px;
+          color: green;
+          background-color: white;
+          border-radius: 100px;
+          
+        }
+      }
     }
 
     &__button-wrapper {

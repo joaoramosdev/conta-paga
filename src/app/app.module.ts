@@ -15,7 +15,6 @@ import { CodigoBarrasComponent } from './pages/codigo-barras/codigo-barras.compo
 import { NgxMaskModule, IConfig } from 'ngx-mask'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
 @NgModule({
   declarations: [
     AppComponent,
