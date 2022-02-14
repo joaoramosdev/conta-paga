@@ -9,6 +9,25 @@
   height: 100vh;
   justify-content: space-between;
 
+  &__back-button {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    font-size: 30px;
+    background-color: transparent;
+
+    ::ng-deep .mat-button-wrapper {
+      display: flex;
+      align-items: center;
+
+    }
+
+    ::ng-deep .mat-icon {
+      font-size: 28px;
+      margin-right: 10px;
+    }
+  }
+
   &__text {
     margin-bottom: 120px;
 

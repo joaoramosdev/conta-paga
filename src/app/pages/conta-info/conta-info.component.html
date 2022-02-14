@@ -1,60 +1,63 @@
 <div class="conta-info-wrapper">
-    <div class="conta-info-wrapper__content">
-        <div class="conta-info-wrapper__header">
-            <div class="conta-info-wrapper__header__image">
-                <img src="../../../assets/imgs/bar-code.svg" alt="">
-            </div>
-            <div class="conta-info-wrapper__header__info">
-                <div class="conta-info-wrapper__header__info__text">Pagar conta</div>
-                <div class="conta-info-wrapper__header__info__value">{{contaInfo.valor_total}}</div>
-            </div>
-        </div>
-        <div class="conta-info-wrapper__info">
-            <div class="conta-info-wrapper__info__item">
-                <span>Data de pagamento</span>
-                <span>{{contaInfo.data_pagamento}}</span>
-            </div>
-            <div class="conta-info-wrapper__info__item">
-                <span>Beneficiário</span>
-                <span>{{contaInfo.beneficiario}}</span>
-            </div>
-            <div class="conta-info-wrapper__info__item">
-                <span>Vencimento</span>
-                <span>{{contaInfo.vencimento}}</span>
-            </div>
-            <div class="conta-info-wrapper__info__item">
-                <span>Multa</span>
-                <span>{{contaInfo.multa}}</span>
-            </div>
-            <div class="conta-info-wrapper__info__item">
-                <span>Juros</span>
-                <span>{{contaInfo.juros}}</span>
-            </div>
-            <div class="conta-info-wrapper__info__item" *ngIf="tipo !== '0'">
-            <span>Taxa de conveniência do cartão (i)</span>
-            <span>{{contaInfo.juros}}</span>
-        </div>
-        <div class="conta-info-wrapper__info__item" *ngIf="tipo !== '0'">
-            <span>Taxa do parcelamento (i)</span>
-            <span>{{contaInfo.juros}}</span>
-        </div>
-        <div class="conta-info-wrapper__info__item" *ngIf="tipo !== '0'">
-            <span>Parcelas</span>
-            <span>{{contaInfo.juros}}</span>
-        </div>
-        <div class="conta-info-wrapper__info__item" *ngIf="tipo !== '0'">
-            <span>Valor total</span>
-            <span>{{contaInfo.valor_total}}</span>
-        </div>
-        </div>
-        <div class="conta-info-wrapper__message">
-            <b>Importante:</b> Pagamentos efetuados após as 19h ou em finais de semana e feriados serão efetivados no
-            próximo dia útil.
-            <br>
-
-            <br>
-            Não é possível cancelar esta operação após a conclusão do pagamento.
-        </div>
+  <button mat-button (click)="voltarPagina()" class="conta-info-wrapper__back-button">
+    <mat-icon>arrow_back</mat-icon>Voltar
+  </button>
+  <div class="conta-info-wrapper__content">
+    <div class="conta-info-wrapper__header">
+      <div class="conta-info-wrapper__header__image">
+        <img src="../../../assets/imgs/bar-code.svg" alt="">
+      </div>
+      <div class="conta-info-wrapper__header__info">
+        <div class="conta-info-wrapper__header__info__text">Pagar conta</div>
+        <div class="conta-info-wrapper__header__info__value">{{contaInfo.valor_total}}</div>
+      </div>
     </div>
-    <button class="conta-info-wrapper__button" (click)="redirect('pagamento')">PRÓXIMO</button>
+    <div class="conta-info-wrapper__info">
+      <div class="conta-info-wrapper__info__item">
+        <span>Data de pagamento</span>
+        <span>{{contaInfo.data_pagamento}}</span>
+      </div>
+      <div class="conta-info-wrapper__info__item">
+        <span>Beneficiário</span>
+        <span>{{contaInfo.beneficiario}}</span>
+      </div>
+      <div class="conta-info-wrapper__info__item">
+        <span>Vencimento</span>
+        <span>{{contaInfo.vencimento}}</span>
+      </div>
+      <div class="conta-info-wrapper__info__item">
+        <span>Multa</span>
+        <span>{{contaInfo.multa}}</span>
+      </div>
+      <div class="conta-info-wrapper__info__item">
+        <span>Juros</span>
+        <span>{{contaInfo.juros}}</span>
+      </div>
+      <div class="conta-info-wrapper__info__item" *ngIf="tipo !== '0'">
+        <span>Taxa de conveniência do cartão (i)</span>
+        <span>{{contaInfo.juros}}</span>
+      </div>
+      <div class="conta-info-wrapper__info__item" *ngIf="tipo !== '0'">
+        <span>Taxa do parcelamento (i)</span>
+        <span>{{contaInfo.juros}}</span>
+      </div>
+      <div class="conta-info-wrapper__info__item" *ngIf="tipo !== '0'">
+        <span>Parcelas</span>
+        <span>{{contaInfo.juros}}</span>
+      </div>
+      <div class="conta-info-wrapper__info__item" *ngIf="tipo !== '0'">
+        <span>Valor total</span>
+        <span>{{contaInfo.valor_total}}</span>
+      </div>
+    </div>
+    <div class="conta-info-wrapper__message">
+      <b>Importante:</b> Pagamentos efetuados após as 19h ou em finais de semana e feriados serão efetivados no
+      próximo dia útil.
+      <br>
+
+      <br>
+      Não é possível cancelar esta operação após a conclusão do pagamento.
+    </div>
+  </div>
+  <button class="conta-info-wrapper__button" (click)="redirect('pagamento')">PRÓXIMO</button>
 </div>

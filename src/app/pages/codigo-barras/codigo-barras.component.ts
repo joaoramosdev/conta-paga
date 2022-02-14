@@ -12,6 +12,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-codigo-barras',
@@ -29,7 +30,11 @@ export class CodigoBarrasComponent implements OnInit, AfterViewInit {
     mainInput: new FormControl('', Validators.required),
   });
 
-  constructor(private formBuilder: FormBuilder, private router: Router) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private _location: Location
+  ) {}
 
   ngOnInit(): void {
     this.codigoForm.get('mainInput')?.valueChanges.subscribe(() => {
@@ -102,5 +107,9 @@ export class CodigoBarrasComponent implements OnInit, AfterViewInit {
     if (e > 1000) {
       this.codigoForm.controls['mainInput'].setValue('');
     }
+  }
+
+  voltarPagina() {
+    this._location.back();
   }
 }
