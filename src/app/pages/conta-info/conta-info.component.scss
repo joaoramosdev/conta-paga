@@ -115,3 +115,13 @@
     margin-left: 20px;
   }
 }
+
+::ng-deep .mat-tooltip {
+  background: $main-blue!important;
+  font-size: 20px;
+}
+
+::ng-deep .mat-icon.mat-primary {
+  color: $main-blue;
+  font-size: 40px;
+}

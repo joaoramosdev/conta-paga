@@ -35,13 +35,13 @@
       </div>
       <div class="conta-info-wrapper__info__item" *ngIf="tipo !== '0'">
         <span>Taxa de conveniência do cartão
-          <mat-icon color="primary" mat-fab matTooltip="Info about the action" matTooltipPosition='above'
+          <mat-icon color="primary" mat-fab matTooltip="Taxa referente uma taxa" matTooltipClass="tooltip" matTooltipPosition='above'
             class="conta-info-wrapper__info__item__icon">info</mat-icon>
         </span>
         <span>{{contaInfo.juros}}</span>
       </div>
       <div class="conta-info-wrapper__info__item" *ngIf="tipo !== '0'">
-        <span>Taxa do parcelamento <mat-icon color="primary" mat-fab matTooltip="Info about the action"
+        <span>Taxa do parcelamento <mat-icon color="primary" mat-fab matTooltipClass="tooltip" matTooltip="Taxa de parcelamento"
             matTooltipPosition='above' class="conta-info-wrapper__info__item__icon">info</mat-icon></span>
         <span>{{contaInfo.juros}}</span>
       </div>

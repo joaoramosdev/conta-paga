@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'cartao', component: CartaoComponent },
   { path: 'conclusao', component: ConclusaoComponent },
   { path: 'termos', component: TermosComponent },
-  { path: 'codigo-barras', component: CodigoBarrasComponent },
+  { path: 'codigo-barras/:tipo', component: CodigoBarrasComponent },
 ];
 
 @NgModule({

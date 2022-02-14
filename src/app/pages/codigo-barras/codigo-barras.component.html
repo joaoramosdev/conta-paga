@@ -18,7 +18,7 @@
         formControlName="mainInput" maxlength="50" autofocus tabindex="0"></textarea>
     </form>
 
-    <div class="codigo-barras-wrapper__keyboard">
+    <div class="codigo-barras-wrapper__keyboard" *ngIf="tipo == '0'">
       <div class="codigo-barras-wrapper__keyboard__button-wrapper">
         <button *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]; let i=index"
           class="codigo-barras-wrapper__keyboard__button-wrapper__button" (click)="put(item)">
@@ -30,8 +30,5 @@
       </div>
     </div>
   </div>
-
-  //TODO: adicionar botão voltar
-
   <button class="codigo-barras-wrapper__button" (click)="redirect('conta-info/0')">PRÓXIMO</button>
 </div>

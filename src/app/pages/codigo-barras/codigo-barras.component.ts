@@ -11,7 +11,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
@@ -25,6 +25,7 @@ export class CodigoBarrasComponent implements OnInit, AfterViewInit {
   input3: any;
   input4: any;
   @ViewChild('codbar') codbar: ElementRef | undefined;
+  tipo: any = '0';
 
   public codigoForm = new FormGroup({
     mainInput: new FormControl('', Validators.required),
@@ -33,8 +34,11 @@ export class CodigoBarrasComponent implements OnInit, AfterViewInit {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private _location: Location
-  ) {}
+    private _location: Location,
+    private _Activatedroute: ActivatedRoute,
+  ) {
+    this.tipo = this._Activatedroute.snapshot.paramMap.get('tipo');
+  }
 
   ngOnInit(): void {
     this.codigoForm.get('mainInput')?.valueChanges.subscribe(() => {

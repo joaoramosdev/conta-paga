@@ -89,11 +89,11 @@
         }
 
         .checkmark {
-          width: 56px;
-          height: 56px;
+          width: 120px;
+          height: 120px;
           border-radius: 50%;
           display: block;
-          stroke-width: 2;
+          stroke-width: 7;
           stroke: #fff;
           stroke-miterlimit: 10;
           margin: 10% auto;
@@ -277,6 +277,6 @@
 
 @keyframes fill {
   100% {
-    box-shadow: inset 0px 0px 0px 30px #7ac142;
+    box-shadow: inset 0px 0px 0px 60px #7ac142;
   }
 }
