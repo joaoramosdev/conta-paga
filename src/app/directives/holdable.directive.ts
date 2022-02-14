@@ -21,6 +21,11 @@ export class HoldableDirective {
     );
   }
 
+  @HostListener('contextmenu', ['$event'])
+  onRightClick(event: any) {
+    event.preventDefault();
+  }
+
   @HostListener('mouseup', ['$event'])
   @HostListener('mouseleave', ['$event'])
   @HostListener('touchleave', ['$event'])
