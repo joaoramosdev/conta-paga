@@ -39,6 +39,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatDividerModule } from '@angular/material/divider';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
@@ -77,6 +78,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatTreeModule,
     MatNativeDateModule,
     MatDividerModule,
+    BrowserAnimationsModule,
   ],
   exports: [
     MatAutocompleteModule,
@@ -114,6 +116,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatTreeModule,
     MatNativeDateModule,
     MatDividerModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
 })

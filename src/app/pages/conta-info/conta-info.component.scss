@@ -70,6 +70,27 @@
     &__item {
       display: flex;
       justify-content: space-between;
+
+      &__icon {
+        font-size: 40px;
+        line-height: 40px;
+        height: 40px;
+        width: 40px;
+
+        ::ng-deep .mat-icon {
+          height: 40px;
+          font-size: 40px;
+          width: 40px;
+        }
+
+        ::ng-deep .mat-icon.mat-primary {
+          font-size: 40px;
+          line-height: 40px;
+          height: 40px;
+          width: 40px;
+
+        }
+      }
     }
   }
 
