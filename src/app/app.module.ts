@@ -12,8 +12,10 @@ import { CartaoComponent } from './pages/cartao/cartao.component';
 import { ConclusaoComponent } from './pages/conclusao/conclusao.component';
 import { TermosComponent } from './pages/termos/termos.component';
 import { CodigoBarrasComponent } from './pages/codigo-barras/codigo-barras.component';
-import { NgxMaskModule, IConfig } from 'ngx-mask'
+import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HoldableDirective } from './directives/holdable.directive';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -26,16 +28,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CartaoComponent,
     ConclusaoComponent,
     TermosComponent,
-    CodigoBarrasComponent
+    CodigoBarrasComponent,
+    HoldableDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgxMaskModule.forRoot(),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MaterialModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

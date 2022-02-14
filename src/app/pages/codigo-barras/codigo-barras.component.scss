@@ -21,7 +21,8 @@
       font-size: 56px;
       width: 100%;
       text-align: center;
-    } 
+    }
+
     &__description {
       margin-top: 20px;
       font-weight: 700;
@@ -44,7 +45,7 @@
       font-weight: 700;
       color: $main-blue;
     }
-    
+
     &__input::-webkit-scrollbar {
       display: none
     }
@@ -91,6 +92,81 @@
     }
   }
 
+  &__keyboard {
+    margin: 200px auto;
+
+    &__button-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 400px;
+      justify-content: space-around;
+      margin: 0 auto;
+
+      &__button {
+        border: none;
+        margin: 15px;
+        border-radius: 5px;
+        width: 100px;
+        height: 100px;
+        font-size: 40px;
+        background-color: $main-blue;
+        color: white;
+
+        &:hover {
+          background-color: #1a6e97;
+        }
+
+        &.delete-button {
+          flex: 1;
+          overflow: hidden;
+
+          ::ng-deep .mat-button-wrapper {
+            z-index: 2;
+            display: block;
+          }
+
+          &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: darken($main-blue, 0.15);
+            transition: all 2s ease-in-out;
+            z-index: -1;
+            border-radius: 5px;
+          }
+
+          &:hover {
+            ::ng-deep .mat-button-wrapper {
+              transition: all .5s;
+              transform: translate(20px, 0);
+            }
+
+
+            &::after {
+              width: 100%;
+            }
+
+            &::before {
+              left: 20px;
+            }
+          }
+
+          &::before {
+            font-family: "Material Icons";
+            content: "\e92e";
+            position: absolute;
+            left: -75px;
+            transition: all 0.5s ease;
+          }
+        }
+      }
+    }
+  }
+
+
   &__button {
     padding: 25px 140px;
     font-size: 60px;
@@ -101,36 +177,5 @@
     border-radius: 100px;
     border: none;
     margin-left: 20px;
-  }
-}
-
-.teclado {
-  // background-color: $;
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 350px;
-  margin: 200px auto;
-  justify-content: space-around;
-  
-  .botao {
-    button {
-      border-radius: 10px;
-      border: none;
-      margin-bottom: 15px;
-      width: 100px;
-      height: 100px;
-      font-size: 40px;
-      background-color: $main-blue;
-      color: white;
-      &:hover {
-        background-color: #1a6e97;
-      }
-    }
-
-    &:last-child {
-      button {
-        width: 215px;
-      }
-    }
   }
 }
