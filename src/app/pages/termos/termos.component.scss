@@ -243,16 +243,15 @@
   }
 
   &__button {
-    padding: 25px 140px;
-    font-size: 60px;
+    padding: 20px 85px;
+    font-size: 50px;
     font-family: "Futura";
     background-color: #0487c9;
     font-weight: 700;
     color: #FFF;
     border-radius: 100px;
     border: none;
-    margin-left: 20px;
-    margin-top: auto;
+    margin-top: 200px;
 
   }
 }
@@ -279,4 +278,10 @@
   100% {
     box-shadow: inset 0px 0px 0px 60px #7ac142;
   }
+}
+
+.actions-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
