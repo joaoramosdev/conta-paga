@@ -1,7 +1,4 @@
 <div class="codigo-barras-wrapper">
-  <button mat-button (click)="voltarPagina()" class="codigo-barras-wrapper__back-button">
-    <mat-icon>arrow_back</mat-icon>Voltar
-  </button>
   <div class="codigo-barras-wrapper__content">
     <div class="codigo-barras-wrapper__header">
       <div class="codigo-barras-wrapper__header__text">
@@ -30,5 +27,8 @@
       </div>
     </div>
   </div>
-  <button class="codigo-barras-wrapper__button" (click)="redirect('conta-info/0')">PRÓXIMO</button>
+  <div class="actions-wrapper">
+    <button class="codigo-barras-wrapper__button" (click)="voltarPagina()">VOLTAR</button>
+    <button class="codigo-barras-wrapper__button" (click)="redirect('conta-info/0')">PRÓXIMO</button>
+  </div>
 </div>

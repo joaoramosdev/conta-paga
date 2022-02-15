@@ -16,6 +16,7 @@ import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HoldableDirective } from './directives/holdable.directive';
 import { MaterialModule } from './material.module';
+import { FooterButtonsComponent } from './components/footer-buttons/footer-buttons.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { MaterialModule } from './material.module';
     TermosComponent,
     CodigoBarrasComponent,
     HoldableDirective,
+    FooterButtonsComponent,
   ],
   imports: [
     BrowserModule,
