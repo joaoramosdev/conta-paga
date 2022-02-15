@@ -104,7 +104,7 @@
   }
 
   &__button {
-    padding: 25px 140px;
+    padding: 20px 85px;
     font-size: 60px;
     font-family: "Futura";
     background-color: #0487c9;
@@ -112,7 +112,6 @@
     color: #FFF;
     border-radius: 100px;
     border: none;
-    margin-left: 20px;
   }
 }
 
@@ -124,4 +123,10 @@
 ::ng-deep .mat-icon.mat-primary {
   color: $main-blue;
   font-size: 40px;
+}
+
+.actions-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }

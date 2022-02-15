@@ -63,5 +63,8 @@
       Não é possível cancelar esta operação após a conclusão do pagamento.
     </div>
   </div>
-  <button class="conta-info-wrapper__button" (click)="redirect('pagamento')">PRÓXIMO</button>
+  <div class="actions-wrapper">
+    <button class="conta-info-wrapper__button" (click)="voltarPagina()">VOLTAR</button>
+    <button class="conta-info-wrapper__button" (click)="redirect('conta-info/0')">PRÓXIMO</button>
+  </div>
 </div>
