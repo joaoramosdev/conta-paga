@@ -8,7 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./categorias.component.scss'],
 })
 export class CategoriasComponent implements OnInit {
-  constructor(private router: Router, private _location: Location) {}
+  constructor(private router: Router, private _location: Location) {
+    setTimeout(function() {
+      if(router.url.includes('/categorias'))
+        router.navigate(['/']);
+    }, 5000)
+  }
 
   ngOnInit(): void {}
 
