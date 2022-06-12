@@ -45,7 +45,7 @@ export class CodigoBarrasComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    
+    localStorage.clear();
   }
 
   clearForm() {
@@ -100,12 +100,17 @@ export class CodigoBarrasComponent implements OnInit, AfterViewInit {
   getBoletoInfo() {
     let codBar = this.codigoForm
     .get('mainInput')
-    ?.value
-    console.log(codBar)
+    ?.value;
 
-    this.apiService.getBoletoInfo(codBar).subscribe(data => {
-      this.toastr.success('Hello world!', 'Toastr fun!');
-      console.log(data)
+    this.apiService.getBoletoInfo(codBar).subscribe({
+      next: data => {
+        localStorage.setItem('boletoData', JSON.stringify(data))
+      },
+      error: error => {
+        this.toastr.error(error.error.message, 'Ops...')
+        console.log(error)
+      }
     })
   }
+
 }

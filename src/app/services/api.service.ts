@@ -12,6 +12,7 @@ export class ApiService {
   constructor(private http: HttpClient) { }
   
   public getBoletoInfo(value: string) {
+    value = value.replace(/[^0-9\.]+/g, '');
     console.log('url', this.url + `/boleto/${value}`)
     return this.http.get(this.url + `/boleto/${value}`)
   }

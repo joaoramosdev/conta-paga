@@ -45,7 +45,11 @@ import { ToastrModule } from 'ngx-toastr';
     MaterialModule,
     HttpClientModule,
     BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot(),
+    ToastrModule.forRoot({
+      positionClass: 'toast-center-center',
+      preventDuplicates: true,
+      timeOut: 3000
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
