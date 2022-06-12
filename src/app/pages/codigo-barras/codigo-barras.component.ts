@@ -14,6 +14,7 @@ import {
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { ApiService } from 'src/app/services/api.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-codigo-barras',
@@ -37,7 +38,8 @@ export class CodigoBarrasComponent implements OnInit, AfterViewInit {
     private router: Router,
     private _location: Location,
     private _Activatedroute: ActivatedRoute,
-    private apiService: ApiService
+    private apiService: ApiService,
+    private toastr: ToastrService
   ) {
     this.tipo = this._Activatedroute.snapshot.paramMap.get('tipo');
   }
@@ -102,6 +104,7 @@ export class CodigoBarrasComponent implements OnInit, AfterViewInit {
     console.log(codBar)
 
     this.apiService.getBoletoInfo(codBar).subscribe(data => {
+      this.toastr.success('Hello world!', 'Toastr fun!');
       console.log(data)
     })
   }
