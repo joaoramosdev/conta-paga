@@ -11,3 +11,13 @@ body {
 * {
   box-sizing: border-box;
 }
+
+#toast-container {
+
+  font-size: 30px !important;
+  width: 600px !important;
+  .ngx-toastr {
+      font-size: 30px !important;
+      width: 600px !important;
+  }
+}

@@ -48,7 +48,7 @@ import { ToastrModule } from 'ngx-toastr';
     ToastrModule.forRoot({
       positionClass: 'toast-center-center',
       preventDuplicates: true,
-      timeOut: 3000
+      timeOut: 5000
     }),
   ],
   providers: [],
