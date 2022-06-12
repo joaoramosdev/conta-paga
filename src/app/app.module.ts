@@ -17,6 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HoldableDirective } from './directives/holdable.directive';
 import { MaterialModule } from './material.module';
 import { FooterButtonsComponent } from './components/footer-buttons/footer-buttons.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { FooterButtonsComponent } from './components/footer-buttons/footer-butto
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
