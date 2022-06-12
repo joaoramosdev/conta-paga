@@ -37,6 +37,7 @@ export class TermosComponent implements OnInit {
       this.toastService.warning('Para continuar é obrigatório autorizar contato em caso de falha.', 'Atenção');
       return;
     }
+    localStorage.setItem('phone', '+55' + this.phoneNumber.replace(/\D/g, ''))
       
     this.router.navigate([to]);
   }
