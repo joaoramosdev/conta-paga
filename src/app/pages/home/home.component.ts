@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    localStorage.clear()
+    localStorage.clear();
   }
   
   redirect(to: any) {

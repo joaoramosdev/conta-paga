@@ -38,7 +38,7 @@ export class TermosComponent implements OnInit {
       return;
     }
     localStorage.setItem('phone', '+55' + this.phoneNumber.replace(/\D/g, ''))
-      
+    this.toastService.clear();
     this.router.navigate([to]);
   }
 
