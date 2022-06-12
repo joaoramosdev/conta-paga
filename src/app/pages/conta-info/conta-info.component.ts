@@ -59,8 +59,22 @@ export class ContaInfoComponent implements OnInit {
   ngOnInit(): void {}
 
   redirect(to: string) {
-    if (this.tipo !== '0') this.router.navigate(['cartao']);
-    else this.router.navigate(['parcelamento']);
+    if (this.tipo !== '0') {
+      let paymentDTO = {
+        phone: localStorage.getItem('phone'),
+        numberBoleto: this.boletoInfo.digitable,
+        transactionId: this.boletoInfo.transactionId,
+        valueBoleto: this.contaInfo.valor_boleto,
+        cardTax: this.contaInfo.taxa_cartao,
+        tax: this.contaInfo.taxa_parcelamento,
+        totalValue: this.contaInfo.valor_total,
+      }
+
+      localStorage.clear();
+      localStorage.setItem('payment', JSON.stringify(paymentDTO))
+      this.router.navigate(['cartao']);
+    }
+    else  this.router.navigate(['parcelamento']);
   }
 
   voltarPagina() {
