@@ -105,6 +105,7 @@ export class CodigoBarrasComponent implements OnInit, AfterViewInit {
     this.apiService.getBoletoInfo(codBar).subscribe({
       next: data => {
         localStorage.setItem('boletoData', JSON.stringify(data))
+        this.router.navigate(['conta-info/0']);
       },
       error: error => {
         this.toastr.error(error.error.message, 'Ops...')

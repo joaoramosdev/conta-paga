@@ -6,7 +6,7 @@
       </div>
       <div class="conta-info-wrapper__header__info">
         <div class="conta-info-wrapper__header__info__text">Pagar conta</div>
-        <div class="conta-info-wrapper__header__info__value">{{contaInfo.valor_total}}</div>
+        <div class="conta-info-wrapper__header__info__value">{{contaInfo.valor_total  | currency : 'R$'}}</div>
       </div>
     </div>
     <div class="conta-info-wrapper__info">
@@ -24,31 +24,35 @@
       </div>
       <div class="conta-info-wrapper__info__item">
         <span>Multa</span>
-        <span>{{contaInfo.multa}}</span>
+        <span>{{contaInfo.multa | currency : 'R$' }}</span>
       </div>
       <div class="conta-info-wrapper__info__item">
         <span>Juros</span>
-        <span>{{contaInfo.juros}}</span>
+        <span>{{contaInfo.juros | currency : 'R$' }}</span>
+      </div>
+      <div class="conta-info-wrapper__info__item">
+        <span>Valor</span>
+        <span>{{contaInfo.valor_boleto | currency : 'R$' }}</span>
       </div>
       <div class="conta-info-wrapper__info__item" *ngIf="tipo !== '0'">
         <span>Taxa de conveniência do cartão
-          <mat-icon color="primary" mat-fab matTooltip="Taxa referente uma taxa" matTooltipClass="tooltip" matTooltipPosition='above'
+          <mat-icon color="primary" mat-fab matTooltip="Tarifa referente a máquina de cartão" matTooltipClass="tooltip" matTooltipPosition='above'
             class="conta-info-wrapper__info__item__icon">info</mat-icon>
         </span>
-        <span>{{contaInfo.juros}}</span>
+        <span>{{contaInfo.taxa_cartao | currency : 'R$' }}</span>
       </div>
       <div class="conta-info-wrapper__info__item" *ngIf="tipo !== '0'">
-        <span>Taxa do parcelamento <mat-icon color="primary" mat-fab matTooltipClass="tooltip" matTooltip="Taxa de parcelamento"
+        <span>Tarifa do serviço <mat-icon color="primary" mat-fab matTooltipClass="tooltip" matTooltip="Tarifa do serviço parcelado em {{contaInfo.parcelas}}x"
             matTooltipPosition='above' class="conta-info-wrapper__info__item__icon">info</mat-icon></span>
-        <span>{{contaInfo.juros}}</span>
+        <span>{{contaInfo.taxa_parcelamento | currency : 'R$' }}</span>
       </div>
       <div class="conta-info-wrapper__info__item" *ngIf="tipo !== '0'">
         <span>Parcelas</span>
-        <span>{{contaInfo.juros}}</span>
+        <span>{{contaInfo.parcelas}}</span>
       </div>
       <div class="conta-info-wrapper__info__item" *ngIf="tipo !== '0'">
         <span>Valor total</span>
-        <span>{{contaInfo.valor_total}}</span>
+        <span>{{contaInfo.valor_total | currency : 'R$' }}</span>
       </div>
     </div>
     <div class="conta-info-wrapper__message">

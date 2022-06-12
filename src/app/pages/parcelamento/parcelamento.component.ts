@@ -1,6 +1,8 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-parcelamento',
@@ -8,26 +10,34 @@ import { Router } from '@angular/router';
   styleUrls: ['./parcelamento.component.scss'],
 })
 export class ParcelamentoComponent implements OnInit {
-  parcelas: Array<any> = [
-    '1x R$100,00',
-    '2x R$100,00',
-    '3x R$100,00',
-    '4x R$100,00',
-    '5x R$100,00',
-    '6x R$100,00',
-    '7x R$100,00',
-    '8x R$100,00',
-    '9x R$100,00',
-    '10x R$100,00',
-    '11x R$100,00',
-    '12x R$100,00',
-  ];
 
-  constructor(private router: Router, private _location: Location) {}
+  private boletoInfo: any;
+  parcelas: any = [];
 
-  ngOnInit(): void {}
+  constructor(private router: Router, private _location: Location, private apiService: ApiService, private toastService: ToastrService) {}
 
-  redirect(to: string) {
+  ngOnInit(): void {
+    this.boletoInfo = localStorage.getItem('boletoData')
+    this.boletoInfo = JSON.parse(this.boletoInfo)
+    this.apiService.getInstallment(this.boletoInfo.value).subscribe({
+      next: (next => {
+        this.parcelas = next;
+      }),
+      error: (error => {
+        this.toastService.error(error, "Algo deu errado");
+      })
+    })
+    
+  }
+
+  selectInstament(item: any, installment: number) {
+    console.log(item, installment)
+    let inst = {
+      value: item,
+      installment,
+      total: item.value * installment
+    }
+    localStorage.setItem('installment', JSON.stringify(inst))
     this.router.navigate(['conta-info/1']);
   }
 

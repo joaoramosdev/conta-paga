@@ -16,5 +16,10 @@ export class ApiService {
     console.log('url', this.url + `/boleto/${value}`)
     return this.http.get(this.url + `/boleto/${value}`)
   }
+
+  public getInstallment(value: string) {
+    console.log('url', this.url + `/installment/${value}`)
+    return this.http.get(this.url + `/installment/${value}`)
+  }
   
 }

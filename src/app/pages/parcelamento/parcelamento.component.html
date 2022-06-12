@@ -5,8 +5,8 @@
   </div>
   <div class="parcelamento-wrapper__list-wrapper">
     <ul class="parcelamento-wrapper__list-wrapper__list">
-      <li class="parcelamento-wrapper__list-wrapper__list__item" (click)="redirect('')" *ngFor="let item of parcelas">
-        {{item}}
+      <li class="parcelamento-wrapper__list-wrapper__list__item" (click)="selectInstament(item, i + 1)" *ngFor="let item of parcelas; let i = index">
+        {{i + 1}}x {{item.value | currency : 'BRL'}}
       </li>
     </ul>
   </div>
