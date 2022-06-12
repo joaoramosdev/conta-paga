@@ -12,7 +12,7 @@
     <form class="codigo-barras-wrapper__input-wrapper" [formGroup]="codigoForm">
       <!-- <span class="codigo-barras-wrapper__input-wrapper__clear" (click)="clearForm()">LIMPAR</span> -->
       <textarea #codbar class="codigo-barras-wrapper__input-wrapper__input" name="codigo-barras" id="codigo-barras"
-        formControlName="mainInput" maxlength="50" autofocus tabindex="0"></textarea>
+        formControlName="mainInput" autofocus tabindex="0"></textarea>
     </form>
 
     <div class="codigo-barras-wrapper__keyboard" *ngIf="tipo == '0'">

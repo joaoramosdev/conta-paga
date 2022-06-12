@@ -45,7 +45,7 @@ export class CodigoBarrasComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    localStorage.clear();
+    localStorage.removeItem('boletoData');
   }
 
   clearForm() {
