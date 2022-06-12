@@ -27,7 +27,7 @@
     <div class="termos-wrapper__contact__title">Dados de contato</div>
     <div class="termos-wrapper__contact__input-wrapper">
       <div class="termos-wrapper__contact__input-wrapper__title">Número de celular</div>
-      <input type="tel" class="termos-wrapper__contact__input-wrapper__cel-input">
+      <input type="tel" [(ngModel)]="phoneNumber" (ngModelChange)="onInputChange($event)" maxlength="16" class="termos-wrapper__contact__input-wrapper__cel-input">
       <div class="termos-wrapper__contact__input-wrapper__cel-checkbox">
         <input type="checkbox" id="cel-checkbox" name="cel-checkbox">
         <label for="cel-checkbox">Autorizo a entrar em contato
